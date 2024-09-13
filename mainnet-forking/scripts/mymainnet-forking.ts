@@ -11,10 +11,10 @@ async function main() {
     await helpers.impersonateAccount(TOKEN_HOLDER);
     const impersonateSigner = await ethers.getSigner(TOKEN_HOLDER);
 
-    const designerAmountA = ethers.parseUnits("100", 6);
-    const desiredAmountB = ethers.parseUnits("1000", 18);
+    const designerAmountA = ethers.parseUnits("10", 6);
+    const desiredAmountB = ethers.parseUnits("100", 18);
 
-    const minAmountA = ethers.parseUnits("10", 6);
+    const minAmountA = ethers.parseUnits("5", 6);
     const minAmountB = ethers.parseUnits("50", 18);
 
     const USDT_Contract = await ethers.getContractAt("IERC20", USDT, impersonateSigner);
